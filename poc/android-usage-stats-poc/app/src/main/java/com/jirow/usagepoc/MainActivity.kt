@@ -185,11 +185,11 @@ class MainActivity : Activity() {
             appendLine("WiFi: ${formatBytes(wifiTotal)}")
             appendLine("Combined: ${formatBytes(mobileTotal + wifiTotal)}")
             appendLine()
-            appendLine("Top data-consuming applications")
+            appendLine("Top $TOP_APP_LIMIT data-consuming applications")
             if (topApps.isEmpty()) {
                 appendLine("No app-level network usage was returned for this period.")
             } else {
-                topApps.take(15).forEachIndexed { index, app ->
+                topApps.take(TOP_APP_LIMIT).forEachIndexed { index, app ->
                     appendLine("${index + 1}. ${app.label} - ${formatBytes(app.totalBytes)}")
                     appendLine("   Mobile: ${formatBytes(app.mobileBytes)} | WiFi: ${formatBytes(app.wifiBytes)}")
                     appendLine("   UID: ${app.uid} | Packages: ${app.packages}")
@@ -297,6 +297,10 @@ class MainActivity : Activity() {
             bytes >= kb -> "${decimalFormat.format(bytes / kb)} KB"
             else -> "$bytes B"
         }
+    }
+
+    private companion object {
+        const val TOP_APP_LIMIT = 10
     }
 }
 
