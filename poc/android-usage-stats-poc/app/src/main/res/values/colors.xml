@@ -1,0 +1,8 @@
+<resources>
+    <color name="screen_background">#F7F8FA</color>
+    <color name="text_primary">#101828</color>
+    <color name="status_success">#027A48</color>
+    <color name="brand_primary">#0F766E</color>
+    <color name="brand_primary_dark">#115E59</color>
+    <color name="brand_accent">#0EA5A3</color>
+</resources>
