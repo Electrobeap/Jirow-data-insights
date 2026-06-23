@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screen_background"
-    android:padding="@dimen/screen_padding">
+    android:fillViewport="true">
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/surface_primary"
-        app:cardCornerRadius="@dimen/launch_card_corner_radius"
-        app:cardElevation="@dimen/launch_card_elevation"
-        app:strokeColor="@color/surface_stroke"
-        app:strokeWidth="@dimen/launch_card_stroke_width">
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingHorizontal="@dimen/launch_card_horizontal_padding"
-            android:paddingVertical="@dimen/launch_card_vertical_padding">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="@dimen/brand_mark_size"
@@ -35,29 +29,360 @@
                 android:textSize="@dimen/brand_mark_text_size"
                 android:textStyle="bold" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/titleText"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/title_margin_top"
-                android:gravity="center"
-                android:text="@string/app_title"
-                android:textColor="@color/text_primary"
-                android:textSize="@dimen/title_text_size"
-                android:textStyle="bold" />
+                android:layout_marginStart="@dimen/space_md"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/statusText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/status_margin_top"
-                android:gravity="center"
-                android:text="@string/app_loaded_status"
-                android:textColor="@color/status_success"
-                android:textSize="@dimen/status_text_size" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/dashboard_title_text_size"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/statusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/app_loaded_status"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/dashboard_subtitle_text_size" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            app:cardBackgroundColor="@color/brand_primary"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation">
 
-</FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_usage_label"
+                    android:textColor="@color/on_brand_muted"
+                    android:textSize="@dimen/label_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:text="@string/total_usage_value"
+                    android:textColor="@color/on_brand"
+                    android:textSize="@dimen/hero_metric_text_size"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:text="@string/usage_status_summary"
+                    android:textColor="@color/on_brand_muted"
+                    android:textSize="@dimen/body_text_size" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/surface_primary"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:strokeColor="@color/surface_stroke"
+                app:strokeWidth="@dimen/card_stroke_width">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/metric_card_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_container_size"
+                        android:layout_height="@dimen/icon_container_size"
+                        android:background="@drawable/icon_container_background"
+                        android:contentDescription="@string/mobile_data_label"
+                        android:padding="@dimen/icon_padding"
+                        android:src="@drawable/ic_mobile_data"
+                        app:tint="@color/brand_primary" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:text="@string/mobile_data_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/label_text_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/mobile_data_value"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/metric_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_sm"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/surface_primary"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:strokeColor="@color/surface_stroke"
+                app:strokeWidth="@dimen/card_stroke_width">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/metric_card_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_container_size"
+                        android:layout_height="@dimen/icon_container_size"
+                        android:background="@drawable/icon_container_background"
+                        android:contentDescription="@string/wifi_data_label"
+                        android:padding="@dimen/icon_padding"
+                        android:src="@drawable/ic_wifi"
+                        app:tint="@color/brand_primary" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:text="@string/wifi_data_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/label_text_size" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/wifi_data_value"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/metric_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            app:cardBackgroundColor="@color/surface_primary"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:strokeColor="@color/surface_stroke"
+            app:strokeWidth="@dimen/card_stroke_width">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/card_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_container_size"
+                    android:layout_height="@dimen/icon_container_size"
+                    android:background="@drawable/success_icon_background"
+                    android:contentDescription="@string/forecast_label"
+                    android:padding="@dimen/icon_padding"
+                    android:src="@drawable/ic_trending"
+                    app:tint="@color/status_success" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forecast_label"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/section_title_text_size"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/forecast_summary"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/body_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            android:text="@string/top_apps_title"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/section_title_text_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginBottom="@dimen/space_xl"
+            app:cardBackgroundColor="@color/surface_primary"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:strokeColor="@color/surface_stroke"
+            app:strokeWidth="@dimen/card_stroke_width">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/top_app_table_min_width"
+                    android:padding="@dimen/table_padding"
+                    android:stretchColumns="1">
+
+                    <TableRow android:paddingBottom="@dimen/space_sm">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppTableHeader"
+                            android:text="@string/table_app_header" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppTableHeader"
+                            android:gravity="end"
+                            android:text="@string/table_total_header" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppTableHeader"
+                            android:gravity="end"
+                            android:text="@string/table_network_header" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <View
+                            style="@style/TableDivider"
+                            android:layout_span="3" />
+
+                    </TableRow>
+
+                    <TableRow style="@style/TopAppTableRow">
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppName"
+                            android:text="@string/top_app_1_name" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_1_total" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_1_network" />
+                    </TableRow>
+
+                    <TableRow style="@style/TopAppTableRow">
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppName"
+                            android:text="@string/top_app_2_name" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_2_total" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_2_network" />
+                    </TableRow>
+
+                    <TableRow style="@style/TopAppTableRow">
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppName"
+                            android:text="@string/top_app_3_name" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_3_total" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_3_network" />
+                    </TableRow>
+
+                    <TableRow style="@style/TopAppTableRow">
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppName"
+                            android:text="@string/top_app_4_name" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_4_total" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_4_network" />
+                    </TableRow>
+
+                    <TableRow style="@style/TopAppTableRow">
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppName"
+                            android:text="@string/top_app_5_name" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_5_total" />
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/TopAppValue"
+                            android:text="@string/top_app_5_network" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,5 +1,5 @@
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:fontFamily">sans-serif</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -10,5 +10,48 @@
         <item name="colorPrimary">@color/brand_primary</item>
         <item name="colorPrimaryDark">@color/brand_primary_dark</item>
         <item name="colorAccent">@color/brand_accent</item>
+    </style>
+
+    <style name="TopAppTableHeader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingHorizontal">@dimen/table_cell_padding_horizontal</item>
+        <item name="android:paddingVertical">@dimen/table_cell_padding_vertical</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TopAppTableRow">
+        <item name="android:paddingVertical">@dimen/space_xs</item>
+    </style>
+
+    <style name="TopAppName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingHorizontal">@dimen/table_cell_padding_horizontal</item>
+        <item name="android:paddingVertical">@dimen/table_cell_padding_vertical</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TopAppValue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">end</item>
+        <item name="android:paddingHorizontal">@dimen/table_cell_padding_horizontal</item>
+        <item name="android:paddingVertical">@dimen/table_cell_padding_vertical</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
+    </style>
+
+    <style name="TableDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/table_divider_height</item>
+        <item name="android:background">@color/surface_stroke</item>
     </style>
 </resources>
