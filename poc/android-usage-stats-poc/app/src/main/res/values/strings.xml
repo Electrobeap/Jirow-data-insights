@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Jirow Usage PoC</string>
+    <string name="brand_mark">JI</string>
     <string name="app_title">Jirow Data Insights</string>
     <string name="app_loaded_status">App Loaded Successfully</string>
 </resources>
