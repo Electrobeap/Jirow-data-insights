@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F8FA"
@@ -18,24 +17,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <com.google.android.material.card.MaterialCardView
+            <TextView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                app:cardBackgroundColor="#0F766E"
-                app:cardCornerRadius="28dp"
-                app:cardElevation="0dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="JI"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.card.MaterialCardView>
+                android:background="#0F766E"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="JI"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -44,7 +35,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/titleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +44,7 @@
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/statusText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -66,47 +57,39 @@
 
         </LinearLayout>
 
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="#0F766E"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp">
+            android:background="#0F766E"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:text="Total usage this month"
+                android:textColor="#CCFBF1"
+                android:textSize="12sp" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Total usage this month"
-                    android:textColor="#CCFBF1"
-                    android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="8.42 GB"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="8.42 GB"
-                    android:textColor="#FFFFFF"
-                    android:textSize="34sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Usage is 14% lower than your recent average."
+                android:textColor="#CCFBF1"
+                android:textSize="14sp" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Usage is 14% lower than your recent average."
-                    android:textColor="#CCFBF1"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -115,185 +98,131 @@
             android:baselineAligned="false"
             android:orientation="horizontal">
 
-            <com.google.android.material.card.MaterialCardView
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="2dp"
-                app:strokeColor="#E4E7EC"
-                app:strokeWidth="1dp">
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#E6FFFB"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textColor="#0F766E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:layout_marginTop="12dp"
+                    android:text="Mobile data"
+                    android:textColor="#667085"
+                    android:textSize="12sp" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardBackgroundColor="#E6FFFB"
-                        app:cardCornerRadius="14dp"
-                        app:cardElevation="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="3.18 GB"
+                    android:textColor="#101828"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="M"
-                            android:textColor="#0F766E"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+            </LinearLayout>
 
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Mobile data"
-                        android:textColor="#667085"
-                        android:textSize="12sp" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="3.18 GB"
-                        android:textColor="#101828"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="2dp"
-                app:strokeColor="#E4E7EC"
-                app:strokeWidth="1dp">
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardBackgroundColor="#E6FFFB"
-                        app:cardCornerRadius="14dp"
-                        app:cardElevation="0dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="W"
-                            android:textColor="#0F766E"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="WiFi"
-                        android:textColor="#667085"
-                        android:textSize="12sp" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="5.24 GB"
-                        android:textColor="#101828"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
-            app:strokeColor="#E4E7EC"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-                <com.google.android.material.card.MaterialCardView
+                <TextView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:cardBackgroundColor="#ECFDF3"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="0dp">
+                    android:background="#E6FFFB"
+                    android:gravity="center"
+                    android:text="W"
+                    android:textColor="#0F766E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="F"
-                        android:textColor="#027A48"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="12dp"
+                    android:text="WiFi"
+                    android:textColor="#667085"
+                    android:textSize="12sp" />
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Forecast"
-                        android:textColor="#101828"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Projected month-end usage is 11.6 GB with medium confidence."
-                        android:textColor="#667085"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="5.24 GB"
+                    android:textColor="#101828"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
-        <com.google.android.material.textview.MaterialTextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#ECFDF3"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="#027A48"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forecast"
+                    android:textColor="#101828"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Projected month-end usage is 11.6 GB with medium confidence."
+                    android:textColor="#667085"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -302,168 +231,164 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <com.google.android.material.card.MaterialCardView
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
-            app:strokeColor="#E4E7EC"
-            app:strokeWidth="1dp">
+            android:background="#FFFFFF"
+            android:fillViewport="true"
+            android:scrollbars="none">
 
-            <HorizontalScrollView
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fillViewport="true"
-                android:scrollbars="none">
+                android:minWidth="520dp"
+                android:padding="16dp"
+                android:stretchColumns="1">
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minWidth="520dp"
-                    android:padding="16dp"
-                    android:stretchColumns="1">
+                <TableRow android:paddingBottom="8dp">
 
-                    <TableRow android:paddingBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="App"
+                        android:textColor="#667085"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="App"
-                            android:textColor="#667085"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Total"
+                        android:textColor="#667085"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:text="Total"
-                            android:textColor="#667085"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Top network"
+                        android:textColor="#667085"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:text="Top network"
-                            android:textColor="#667085"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+                </TableRow>
 
-                    </TableRow>
+                <TableRow>
 
-                    <TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_span="3"
+                        android:background="#E4E7EC" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_span="3"
-                            android:background="#E4E7EC" />
+                </TableRow>
 
-                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="12dp"
+                        android:text="YouTube"
+                        android:textColor="#101828"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                    <TableRow>
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:paddingVertical="12dp"
-                            android:text="YouTube"
-                            android:textColor="#101828"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="2.10 GB"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="WiFi"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                    </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="2.10 GB"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
 
-                    <TableRow>
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:paddingVertical="12dp"
-                            android:text="TikTok"
-                            android:textColor="#101828"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="1.46 GB"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="Mobile"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                    </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="WiFi"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
+                </TableRow>
 
-                    <TableRow>
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:paddingVertical="12dp"
-                            android:text="Instagram"
-                            android:textColor="#101828"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="912 MB"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                        <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:paddingVertical="12dp"
-                            android:text="Mobile"
-                            android:textColor="#101828"
-                            android:textSize="14sp" />
-                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="12dp"
+                        android:text="TikTok"
+                        android:textColor="#101828"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                </TableLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="1.46 GB"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
 
-            </HorizontalScrollView>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="Mobile"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
+                </TableRow>
 
-        </com.google.android.material.card.MaterialCardView>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="12dp"
+                        android:text="Instagram"
+                        android:textColor="#101828"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="912 MB"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingVertical="12dp"
+                        android:text="Mobile"
+                        android:textColor="#101828"
+                        android:textSize="14sp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
 
     </LinearLayout>
 
